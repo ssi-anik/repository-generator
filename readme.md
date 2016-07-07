@@ -7,7 +7,8 @@ Repository generator generates the Repository class that's how it's required for
 
 ## How to install?
 1. `composer require anik/repository-generator`
-2. After the installation, run `php artisan vendor:publish`. This will copy the config file to Laravel's config directory named `generator.php`
+2. Add `Anik\Generator\Providers\RepositoryGeneratorServiceProvider::class` to the providers array in config/app.php 
+3. After the installation, run `php artisan vendor:publish`. This will copy the config file to Laravel's config directory named `generator.php`
 
 ## Configuration:
 1. namespace: The namespace you want to have for the class.
