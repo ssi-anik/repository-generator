@@ -24,7 +24,8 @@ The artisan console has one mandatory argument and 3 optional arguments.
   3. --model=model. if specified, will lookup using the config file's model_namespace. If found, then will be returned from the implemented model() method. Otherwise, will be left blank.
 
 ## Example: 
-```php artisan make:repository UserRepository
+```
+php artisan make:repository UserRepository
 php artisan make:repository UserRepository --namespace=Repository
 php artisan make:repository UserRepository --model=User
 php artisan make:repository UserRepository --namespace=Repository --model=User
