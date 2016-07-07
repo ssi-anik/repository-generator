@@ -67,7 +67,6 @@ class RepositoryGeneratorCommand extends Command
 		}
 
 		$this->generate_repository_class($class, $namespace, $dir, $model);
-		$this->info(sprintf('Class "%s" created with namespace "%s" in directory "%s"', $class, $namespace, $dir));
 	}
 
 	/**
@@ -83,7 +82,17 @@ class RepositoryGeneratorCommand extends Command
 		$stub = $this->get_stub();
 		$replaced_text = $this->replacer($namespace, $class, $stub, $model);
 		$this->create_dir($dir);
-		file_put_contents(sprintf("%s/%s.php", $dir, $class), $replaced_text);
+		$new_class = sprintf("%s/%s.php", $dir, $class);
+		if ( file_exists($new_class) ) {
+			$this->error(sprintf("Class \"%s\" already exists in %s.", $class, $dir));
+			$this->warn("Aborting!!!");
+
+			return;
+		}
+		// put content to the file
+		file_put_contents($new_class, $replaced_text);
+		// show message
+		$this->info(sprintf('Class "%s" created with namespace "%s" in directory "%s."', $class, $namespace, $dir));
 	}
 
 	/**
