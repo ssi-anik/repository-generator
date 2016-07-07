@@ -1,4 +1,4 @@
-# Repository generator is a PHP class generator for the [Repository pattern - Repottern](https://github.com/ssi-anik/repottern)
+## Repository generator is a PHP class generator for the [Repository pattern - Repottern](https://github.com/ssi-anik/repottern)
 Repository generator generates the Repository class that's how it's required for the Repottern. Have a look at [repottern](https://github.com/ssi-anik/repottern)
 
 ## Requirements: 
@@ -24,16 +24,18 @@ The artisan console has one mandatory argument and 3 optional arguments.
   3. --model=model. if specified, will lookup using the config file's model_namespace. If found, then will be returned from the implemented model() method. Otherwise, will be left blank.
 
 ## Example: 
-`php artisan make:repository UserRepository`
-`php artisan make:repository UserRepository --namespace=Repository`
-`php artisan make:repository UserRepository --model=User`
-`php artisan make:repository UserRepository --namespace=Repository --model=User`
+```php artisan make:repository UserRepository
+php artisan make:repository UserRepository --namespace=Repository
+php artisan make:repository UserRepository --model=User
+php artisan make:repository UserRepository --namespace=Repository --model=User
+```
 
 ## Note:
 _Here, the optional arguments can be used at any position_ 
+
 _If the --dir argument is specified, then the directory will be created regarding the current path_
 ## License:
 Repository Generator is released under the MIT Licence.
 
-#Bugs and Issues:
+## Bugs and Issues:
 Well, I'll always appreciate if you find any bug or issue. Feel free to inform. Anyway, forks are welcomed too.
