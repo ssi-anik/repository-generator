@@ -1,11 +1,14 @@
 <?php namespace @@NAMESPACE@@;
 
 use Anik\Repottern\BaseRepository;
-
+@@MODEL_NAMESPACE@@
 class @@CLASS@@ extends BaseRepository
 {
+	/**
+     * @return Illuminate\\Database\\Eloquent\\Model extended class
+     */
 	public function model ()
 	{
-		// TODO:: return your "Illuminate\Database\Eloquent\Model" model;
+        @@RETURN@@
 	}
 }
