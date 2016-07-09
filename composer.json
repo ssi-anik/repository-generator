@@ -1,6 +1,6 @@
 {
     "name": "anik/repository-generator",
-    "description": "Repottern is a repository pattern for Laravel.",
+    "description": "Repository generator generates repository classes as it requires for repottern package.",
     "license": "MIT",
     "authors": [
         {
